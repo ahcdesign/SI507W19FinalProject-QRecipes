@@ -35,7 +35,8 @@ week, simple and fast to cook. It will also have a return button for accessibili
 return to the homepage. 
 - `/QuickMeal` -> This route will show a list of quick recipes with more ingredients but 
 the duration will still be the same as the meal prep. 
-- `/home/<username>` -> The homepage will also take the input of a name and show a greeting
+- `/home/<username>` -> The homepage will also take the input of a name and show a greeting 
+before the table of contents
 
 ## How to run tests
 1. First... (e.g. access a certain directory if necessary)
@@ -59,11 +60,11 @@ Please check the requirements you have accomplished in your code as demonstrated
 Below is a list of the requirements listed in the rubric for you to copy and paste.  See rubric on Canvas for more details.
 
 ### General
-- [ ] Project is submitted as a Github repository
+- [x] Project is submitted as a Github repository
 - [ ] Project includes a working Flask application that runs locally on a computer
 - [ ] Project includes at least 1 test suite file with reasonable tests in it.
 - [ ] Includes a `requirements.txt` file containing all required modules to run program
-- [ ] Includes a clear and readable README.md that follows this template
+- [x] Includes a clear and readable README.md that follows this template
 - [ ] Includes a sample .sqlite/.db file
 - [ ] Includes a diagram of your database schema
 - [ ] Includes EVERY file needed in order to run the project
