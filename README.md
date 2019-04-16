@@ -85,8 +85,8 @@ Below is a list of the requirements listed in the rubric for you to copy and pas
 - [x] A many-to-many relationship in your database structure
 - [x] At least one form in your Flask application
 - [ ] Templating in your Flask application
-- [x] Inclusion of JavaScript files in the application
-- [x] Links in the views of Flask application page/s
+- [x] *Inclusion of JavaScript files in the application*
+- [x] *Links in the views of Flask application page/s*
 - [ ] Relevant use of `itertools` and/or `collections`
 - [ ] Sourcing of data using web scraping
 - [ ] Sourcing of data using web REST API requests
