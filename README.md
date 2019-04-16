@@ -45,11 +45,12 @@ before the table of contents
 NOTE: Need not have 3 steps, but should have as many as are appropriate!
 
 ## In this repository:
-- Directory Name
-  - File in directory
-  - File in directory
-- File name
-- File name
+- Data
+  - clean_recipes.csv
+- README.md
+- recipes_cleaned.csv
+- SI507project_tests.py
+- SI507project_tools.py
 
 ---
 ## Code Requirements for Grading
