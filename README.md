@@ -36,8 +36,6 @@ week, simple and fast to cook. It will also have a return button for accessibili
 return to the homepage. 
 - `/ContributedQRecipes` -> This route will allow the user to input recipes they have seen
 online to be added into the database.
-- `/home/<username>` -> The homepage will also take the input of a name and show a greeting 
-before the table of contents
 
 ## How to run tests
 1. First... (e.g. access a certain directory if necessary)
