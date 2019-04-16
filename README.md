@@ -18,23 +18,24 @@ they can use for themselves to either meal prep or quick de-stressor.
 
 ## How to run
 
-1. First, you should ... (e.g. install all requirements with `pip install -r requirements.txt`)
-2. Second, you should ... (e.g. run `python programname.py runserver` or whatever else is appropriate)
-3. Anything else
+1. First, you should install all requirements with `pip install -r requirements.txt`
+2. Second, you should run `SI507project_tools.py runserver`
 
 ## How to use
 
 1. A useful instruction goes here
 2. A useful second step here
-3. (Optional): Markdown syntax to include an screenshot/image: ![alt text](image.jpg)
+3. Understanding the database: 
+
+![alt text](ERDiagram_FinalProject.png)
 
 ## Routes in this application
-- `/home` -> this is the home page containing a Table of Contents for the 
-- `/MealPrep` -> This route will show a list of healthy recipes that can be prepped for a 
+- `/home` -> this is the home page containing a Table of Contents directing to two options.
+- `/SuggestedQRecipes` -> This route will show a list of healthy recipes that can be prepped for a 
 week, simple and fast to cook. It will also have a return button for accessibility to 
 return to the homepage. 
-- `/QuickMeal` -> This route will show a list of quick recipes with more ingredients but 
-the duration will still be the same as the meal prep. 
+- `/ContributedQRecipes` -> This route will allow the user to input recipes they have seen
+online to be added into the database.
 - `/home/<username>` -> The homepage will also take the input of a name and show a greeting 
 before the table of contents
 
@@ -47,6 +48,7 @@ NOTE: Need not have 3 steps, but should have as many as are appropriate!
 ## In this repository:
 - Data
   - clean_recipes.csv
+- ERDiagram_FinalProject.png
 - README.md
 - recipes_cleaned.csv
 - SI507project_tests.py
