@@ -18,8 +18,8 @@ they can use for themselves to either meal prep or quick de-stressor.
 
 ## How to run
 
-1. First, you should install all requirements with `pip install -r requirements.txt`
-2. Second, you should run `SI507project_tools.py runserver`
+1. Install all requirements with `pip install -r requirements.txt`
+2. Run `SI507project_tools.py runserver`
 
 ## How to use
 
@@ -55,8 +55,8 @@ NOTE: Need not have 3 steps, but should have as many as are appropriate!
 ---
 ## Code Requirements for Grading
 Please check the requirements you have accomplished in your code as demonstrated.
-- [x] This is a completed requirement.
-- [ ] This is an incomplete requirement.
+- [ ] This is a completed requirement.
+- [x] This is an incomplete requirement.
 
 Below is a list of the requirements listed in the rubric for you to copy and paste.  See rubric on Canvas for more details.
 
@@ -67,16 +67,16 @@ Below is a list of the requirements listed in the rubric for you to copy and pas
 - [ ] Includes a `requirements.txt` file containing all required modules to run program
 - [x] Includes a clear and readable README.md that follows this template
 - [ ] Includes a sample .sqlite/.db file
-- [ ] Includes a diagram of your database schema
+- [x] Includes a diagram of your database schema
 - [ ] Includes EVERY file needed in order to run the project
 - [ ] Includes screenshots and/or clear descriptions of what your project should look like when it is working
 
 ### Flask Application
 - [ ] Includes at least 3 different routes
 - [ ] View/s a user can see when the application runs that are understandable/legible for someone who has NOT taken this course
-- [ ] Interactions with a database that has at least 2 tables
-- [ ] At least 1 relationship between 2 tables in database
-- [ ] Information stored in the database is viewed or interacted with in some way
+- [x] Interactions with a database that has at least 2 tables
+- [x] At least 1 relationship between 2 tables in database
+- [x] Information stored in the database is viewed or interacted with in some way
 
 ### Additional Components (at least 6 required)
 - [x] **Use of a new module**
