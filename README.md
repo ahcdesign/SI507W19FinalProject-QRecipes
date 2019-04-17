@@ -8,13 +8,12 @@ Angela Chih
 
 ## Project Description
 
-My project "QRecipes" will collect recipes and gather the information and select all the 
-recipes with the shortest duration and at least a vegetable is included in the recipe. 
-As a graduate student I would like the option to either meal prep or have a night in to 
-de-stress but not take too long to cook as I still have a lot of work to do. The main page 
-of the Flask route will be the Table of Contents leading to two other Flask routes of meal 
-prepping and quick de-stressor meals. The project will allow users to look for recipes 
-they can use for themselves to either meal prep or quick de-stressor.  
+My project is called "QRecipes" as in Quick Recipes the Flask routes will have provided a list of recipes 
+with a total prep time duration of less than 45 minutes and includes the total ingredients needed along with the 
+direction of the recipes. As a Graduate student I would like the option to either meal prep or have a night in to 
+de-stress but not take too long to cook/bake as I still have a lot of work to do. The main page 
+of the Flask route will be the "Table of Contents" leading to 2 different Flask routes of providing the list of recipes
+and another page to allow users to contribute recipes to add to the database.
 
 ## How to run
 
