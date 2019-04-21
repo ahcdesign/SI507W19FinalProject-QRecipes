@@ -57,7 +57,7 @@ to allow users to contribute recipes to add to the database.
 - cleanCSV_data.py
 - SI507project_tests.py
 - SI507project_tools.py
-- Qrecipes.db
+- Qrecipes_Sample.db
 - requirements.txt
 - templates
 	- addrecipe.html
