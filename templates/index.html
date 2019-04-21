@@ -1,0 +1,48 @@
+<html>
+
+    <head>
+      <title>QRecipes</title>
+      
+      <!-- CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
+      <!-- JS -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav>
+            <div class="nav-wrapper">
+                <span class="brand-logo center">QRecipes</span>
+            </div>
+        </nav>
+        <div class="intro">
+        <p>This project is called "QRecipes" as in Quick Recipes the Flask routes provides a list of recipes from a database. 
+        As a Graduate student I would like to have the option to either meal prep or have a night in to de-stress but not take 
+        too long to cook/bake as I still have a lot of work to do. Enjoy!</p>
+        </div>
+        <div class="container">
+        	<div class="row">
+        		<div class="col s12 m12">
+            		<div class="card">
+                <div class="card-content">
+                	<p>To Cook or Contribute?</p>
+                    <div class="ShareRecipe"><a href="/qrecipes/addrecipe">Share A Recipe</a></div>
+                    
+                	<div class="searchrecipes"> 
+                        <div>Search Recipe Titles</div>
+                        <input type="text" id="search" placeholder="Enter a search term"></input>  
+                    	<div class="button"><a class="waves-effect waves-light btn-large" href="#" role="button" id="recipe_submit">GO</a></div>
+                    </div>
+                </div>
+          </div>
+        </div>
+    </div>
+        </div>
+        <script type="text/javascript" src="{{ url_for('static',filename='js/index.js') }}"></script>
+    </body>
+</html>

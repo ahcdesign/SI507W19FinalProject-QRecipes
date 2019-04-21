@@ -3,48 +3,40 @@ import unittest
 
 ### Will change the strings later this week >>> Source Credit: SI507_HW05_TestCase
 
-class FinalProject(unittest.TestCase):
+class SI507FinalProjectTesting(unittest.TestCase):
 
 	def setUp(self):
-		self.conn = sqlite3.connect("chocolate_sources.sqlite") # Connecting to database that should exist in autograder
+		self.conn = sqlite3.connect("./Qrecipes.db") # Connecting to database that should exist in autograder
 		self.cur = self.conn.cursor()
 
 	def test_for_recipes_table(self):
-		self.cur.execute("select Recipe_ID, Recipe_Name, Recipe_Photo, Total_Reviews, Author, Prep_Time, Cook_Time, Total_Time, Ingredients, Total_Ingredients, Description from recipes where RecipeID = '7013'")
+		self.cur.execute("select recipes_name, directions, recipe_photo, review_count, total_time, prep_time, cook_time, author_id from recipes where recipes_name='Mocha Chocolate Chip Banana Muffins Recipe'")
 		data = self.cur.fetchone()
-		self.assertEqual(data,('ALA', 'Åland Islands', 'Europe', 28875, 1580.0), "Testing data that results from selecting country ALA")
-
-	def test_chocolate_insert_works(self):
-		chocolate = ('A. Morin', 'Kappi', '2015', 70.0, "Haiti", 2.75)
-		ch = ('A. Morin', 'Kappi', '2015', 70.0, 98, 2.75)
-		self.cur.execute("insert into chocolatebars(company, specificBeanBarName, reviewDate, cocoaPercent, companyCountry, rating) values (?, ?, ?, ?, (select id from countries where englishname=?), ?)", chocolate)
-		self.conn.commit()
-
-		self.cur.execute("select company, specificBeanBarName, reviewDate, cocoaPercent, companyCountry, rating from chocolatebars where specificBeanBarName= 'Kappi'")
-		data = self.cur.fetchone()
-		self.assertEqual(data,ch,"Testing another select statement after a sample insertion")
+		self.assertEqual(data,('Mocha Chocolate Chip Banana Muffins Recipe', 'Preheat oven to 350 degrees F (175 degrees C).**Blend butter or margarine, sugar, egg, banana, dissolved coffee, and vanilla in food processor for 2 minutes. Add flour, salt, baking powder, and soda, and blend just until flour disappears. Add chocolate chips and mix in with wooden spoon. Spoon mixture into 15 to 18 paper-lined muffin cups.**Bake for 25 minutes.  Cool on wire racks.**', 'https://images.media-allrecipes.com/userphotos/560x315/1334257.jpg', 579, '35 m', '10 m', '25 m', 1), "Testing data that results from selecting recipes_name Mocha Chocolate Chip Banana Muffins Recipe")
 
 	def test_for_ingredients_table(self):
-		res = self.cur.execute("select * from chocolatebars")
-		data = res.fetchall()
-		self.assertTrue(data, 'Testing that you get a result from making a query to the chocolatebars table')
-
-	def test_country_insert_works(self):
-		country = ('SIR', '507 Islands', 'Europe', 28875, 1580.0)
-		self.cur.execute("insert into countries(countrycode, englishname, region, population, area) values (?, ?, ?, ?, ?)", country)
+		self.cur.execute("select ingredients_id, ingredients_name from ingredients where ingredients_name='margarine'")
+		data = self.cur.fetchone()
+		self.assertEqual(data,(1, 'margarine'), "Testing data from ingredients_name margarine")
+		
+	def test_for_recipeauthors_table(self):
+		self.cur.execute("select author_id, author_name from recipe_authors where author_name='Jan Bittner'")
+		data = self.cur.fetchone()
+		self.assertEqual(data,(2, 'Jan Bittner'), "Testing data from recipe_authors Jan Bittner")
+	
+	def test_for_addrecipes_table(self):
+		addrecipe = ('SI507FinalProject', 'Submission', '25 m')
+		self.cur.execute("insert into recipes(recipes_name, directions, total_time) values (?, ?, ?)", addrecipe)
 		self.conn.commit()
 
-		self.cur.execute("select countrycode, englishname, region, population, area from countries where countrycode = 'SIR'")
+		self.cur.execute("select recipes_name, directions, total_time from recipes where recipes_name='SI507FinalProject'")
 		data = self.cur.fetchone()
-		self.assertEqual(data, country, "Testing a select statement where countrycode = SIR")
+		self.assertEqual(data, addrecipe, "Testing another select statement after a sample insertion")
 
-
-	def test_foreign_key_ingredients(self):
-		res = self.cur.execute("select * from chocolatebars INNER JOIN countries ON chocolatebars.companyCountry = countries.id")
+	def test_for_recipes_table(self):
+		res = self.cur.execute("select * from recipes")
 		data = res.fetchall()
-		self.assertTrue(data, "Testing that result of selecting based on relationship between chocolatebars and countries does work")
-		self.assertTrue(len(data) in [1795, 1796], "Testing that there is in fact the amount of data entered that there should have been -- based on this query of everything in both tables.{}".format(len(data)))
-
+		self.assertTrue(data, 'Testing that you get a result from making a query to the recipes table')
 
 	def tearDown(self):
 		self.conn.commit()

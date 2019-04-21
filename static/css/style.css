@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Mako');
+
+.nav-wrapper {
+	background-color: green;
+	font-family: 'Mako', sans-serif;
+	font-weight: bold;
+}
+
+.intro {
+	padding-left: 5%;
+	padding-right: 5%;
+	text-align: center;
+	font-family: Nunito, sans-serif;
+}
+
+.searchtext {
+	color: orange;
+	text-decoration: underline;
+}
+
+#recipe_submit {
+	background-color: orange;
+}
+
+.card-content p {
+	font-size: 30px;
+	text-decoration: underline;
+}
+
+.ShareRecipe a {
+	padding: 10px;
+	font-size: 25px;
+}
+
+.searchrecipes {
+	padding: 10px;
+	font-size: 25px;
+}
+
+.button {
+	margin-top: 10px;
+}
+
+.sharingform {
+	padding: 10px;
+}
+
+.sharingform p {
+	margin-bottom: 5px;
+}
