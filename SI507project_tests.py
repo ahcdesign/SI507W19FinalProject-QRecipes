@@ -1,7 +1,7 @@
 import sqlite3
 import unittest
 
-### Will change the strings later this week >>> Source Credit: SI507_HW05_TestCase
+### Source Credit: SI507_HW05_TestCase
 
 class SI507FinalProjectTesting(unittest.TestCase):
 
