@@ -18,9 +18,10 @@ to allow users to contribute recipes to add to the database.
 ## How to run
 
 1. Install all requirements with `pip install -r requirements.txt`
-2. Run the `SI507project_tools.py` on the terminal
-3. Retrieve, copy and paste the terminal route # onto your browser of choice. The terminal route number will look similar to this: ``http://127.0.0.1:5000/`` but a different routing number
-
+2. Run the `SI507project_tools.py` on the terminal 
+	- It will take a while to run since the cvs data is large, while it is running you will see the "Qrecipes.db-journal" pop in and out which means it is successfully putting the data into the database. 
+3. Once it is finished running, retrieve, copy and paste the terminal route # onto your browser of choice. The terminal route number will look similar to this: ``http://127.0.0.1:5000/`` but a different routing number
+4. To exit the routes hit CTRL+C
 
 ## How to use
 
